@@ -1,0 +1,66 @@
+{
+    "version": 1,
+    "author": "Anonymous maker",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-breadboard-mini", "id": "bb1", "top": -78.2, "left": 132, "attrs": {} },
+      { "type": "wokwi-arduino-mega", "id": "mega", "top": 87, "left": 15.6, "attrs": {} },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": -109.2,
+        "left": 176.6,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": -42,
+        "left": 195.8,
+        "attrs": { "color": "yellow" }
+      },
+      { "type": "wokwi-led", "id": "led3", "top": -3.6, "left": 215, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 32.75,
+        "left": 240,
+        "attrs": { "value": "1000" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": -5.65,
+        "left": 220.8,
+        "attrs": { "value": "1000" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": -72.85,
+        "left": 201.6,
+        "attrs": { "value": "1000" }
+      }
+    ],
+    "connections": [
+      [ "r1:1", "bb1:11b.j", "", [ "$bb" ] ],
+      [ "r1:2", "bb1:17b.j", "", [ "$bb" ] ],
+      [ "led3:A", "bb1:11b.j", "", [ "$bb" ] ],
+      [ "led3:C", "bb1:10b.j", "", [ "$bb" ] ],
+      [ "led2:A", "bb1:9b.f", "", [ "$bb" ] ],
+      [ "led2:C", "bb1:8b.f", "", [ "$bb" ] ],
+      [ "r2:1", "bb1:9b.f", "", [ "$bb" ] ],
+      [ "r2:2", "bb1:15b.f", "", [ "$bb" ] ],
+      [ "led1:A", "bb1:7t.a", "", [ "$bb" ] ],
+      [ "led1:C", "bb1:6t.a", "", [ "$bb" ] ],
+      [ "r3:1", "bb1:7t.a", "", [ "$bb" ] ],
+      [ "r3:2", "bb1:13t.a", "", [ "$bb" ] ],
+      [ "led1:C", "mega:GND.4", "green", [ "v0" ] ],
+      [ "led2:C", "mega:GND.4", "green", [ "v0" ] ],
+      [ "led3:C", "mega:GND.4", "green", [ "v0" ] ],
+      [ "r1:2", "mega:22", "green", [ "v0" ] ],
+      [ "r2:2", "mega:23", "green", [ "v0" ] ],
+      [ "r3:2", "mega:24", "green", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }

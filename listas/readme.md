@@ -1,0 +1,1 @@
+Onde possível, as listas serão simuladas no [Wokwi](https://wokwi.com/). Arquivos `diagram.json` são para remontar o circuito nesta ferramenta.
