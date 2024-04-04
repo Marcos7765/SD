@@ -23,23 +23,23 @@
     }
   ],
   "connections": [
-    [ "mega:2", "sevseg1:A", "green", [ "v0" ] ],
-    [ "mega:3", "sevseg1:B", "green", [ "v0" ] ],
-    [ "mega:4", "sevseg1:C", "green", [ "v0" ] ],
-    [ "mega:5", "sevseg1:D", "green", [ "v0" ] ],
-    [ "mega:6", "sevseg1:E", "green", [ "v0" ] ],
-    [ "mega:7", "sevseg1:F", "green", [ "v0" ] ],
-    [ "mega:8", "sevseg1:G", "green", [ "v0" ] ],
     [ "sevseg1:COM.1", "mega:3.3V", "green", [ "h-48", "v453.9" ] ],
     [ "mega:5V.1", "btn1:2.r", "red", [ "v-18.2", "h-501.4" ] ],
-    [ "r1:1", "bb1:17b.f", "", [ "$bb" ] ],
-    [ "r1:2", "bb1:23b.f", "", [ "$bb" ] ],
     [ "mega:GND.3", "r1:2", "black", [ "v-2.7", "h-237.75" ] ],
     [ "btn1:1.l", "mega:10", "green", [ "v163.2", "h249.6" ] ],
     [ "btn1:1.l", "bb1:17t.a", "", [ "$bb" ] ],
     [ "btn1:2.l", "bb1:15t.a", "", [ "$bb" ] ],
     [ "btn1:1.r", "bb1:17b.f", "", [ "$bb" ] ],
-    [ "btn1:2.r", "bb1:15b.f", "", [ "$bb" ] ]
+    [ "btn1:2.r", "bb1:15b.f", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:17b.f", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:23b.f", "", [ "$bb" ] ],
+    [ "mega:22", "sevseg1:C", "green", [ "v0" ] ],
+    [ "mega:23", "sevseg1:D", "green", [ "v0" ] ],
+    [ "mega:24", "sevseg1:E", "green", [ "v0" ] ],
+    [ "mega:25", "sevseg1:B", "green", [ "v0" ] ],
+    [ "mega:26", "sevseg1:A", "green", [ "v0" ] ],
+    [ "mega:27", "sevseg1:F", "green", [ "v0" ] ],
+    [ "mega:28", "sevseg1:G", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }

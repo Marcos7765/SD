@@ -7,13 +7,13 @@ uint8_t buttonState = 0;
 //(reescrevi porque esculhambei onde cada pino ia no display, escrevi os padrões na forma que vinham primeiro)
 const uint8_t numbers[8] = {
   0b01000000,  // 0
-  (~0b00000110),  // 1
-  (~0b01011011),  // 2
-  (~0b01001111),  // 3
-  0b00011001,  // 4
-  0b00010010,  // 5
-  0b00000010,  // 6
-  (~0b00000111)  // 7
+  0b01110110,  // 1
+  0b00100001,  // 2
+  (~0b01011011),  // 3
+  0b00010110,  // 4
+  0b00001100,  // 5
+  0b00001000,  // 6
+  (~0b00011001)  // 7
 };
 
 // Variável para armazenar o número atual
@@ -31,6 +31,7 @@ void loop_c() {
   //essa lógica está acontecendo para qualquer momento c o botão pressionado (detectando nível)
   if (buttonState) {
     for (;count<=7 ;count++){
+      Serial.print(count);
       PORTA = numbers[count];
       _delay_ms(1000);
     }
