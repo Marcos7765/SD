@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": -39.8, "left": 448.8, "attrs": {} },
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0.6, "left": 25.2, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -172.5, "left": 599.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 51.95,
+      "left": 556.8,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "dht1:GND", "mega:GND.5", "black", [ "v0" ] ],
+    [ "dht1:SDA", "bb1:17b.f", "green", [ "v0" ] ],
+    [ "r1:1", "bb1:11b.h", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:17b.h", "", [ "$bb" ] ],
+    [ "dht1:VCC", "bb1:11b.f", "red", [ "v0", "h-57.6" ] ],
+    [ "mega:5V.1", "bb1:11b.j", "red", [ "h36.2", "v68.2" ] ],
+    [ "bb1:17b.j", "mega:22", "green", [ "v19.2", "h-182.4", "v-76.8", "h-9.6" ] ]
+  ],
+  "dependencies": {}
+}

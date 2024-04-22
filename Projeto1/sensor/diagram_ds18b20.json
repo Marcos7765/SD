@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "author": "Anonymous maker",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-mega", "id": "mega", "top": -37.8, "left": -99.6, "attrs": {} },
+      { "type": "board-ds18b20", "id": "temp1", "top": 46.87, "left": 426.48, "attrs": {} }
+    ],
+    "connections": [
+      [ "mega:GND.2", "temp1:GND", "black", [ "v35.7", "h11.75" ] ],
+      [ "temp1:VCC", "mega:5V", "red", [ "v57.6", "h-307.2" ] ],
+      [ "temp1:DQ", "mega:22", "green", [ "v9.6", "h-67.2", "v-153.6" ] ]
+    ],
+    "dependencies": {}
+  }
