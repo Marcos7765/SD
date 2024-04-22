@@ -1,14 +1,22 @@
 ### Peças
 #### Protótipo:
 - Arduino Mega 2560;
-- LCD 16x2 (inserir nome);
-- Buzzer (inserir nome, ver Como alertar);
-- Sensor de temperatura NTC (é à prova d'água);
-- Dois botões (um para liga/desliga outro para modo);
+- LCD 16x2 1602;
+- Buzzer HXD;
+- Sensor de temperatura DHT1111; (1x resistor)
+- 2x botões (um para liga/desliga outro para modo); (2x resistores)
+- Potênciometro L20;
 - Resistores à gosto.
 
 
 #### Projeto:
+- 1x ATmega328p
+- 1x LCD 16x2 1602;
+- 1x Buzzer SFM-27;
+- 1x Sensor de temperatura NTC (é à prova d'água! como todo NTC!); (1x resistor)
+- 2x botões R13-507; (2x resistores)
+- 1x Potênciometro L20;
+- Resistores à gosto.
 - A definir.
 
 ### Medições
@@ -23,7 +31,7 @@ Caso o buzzer não aproveite do PWM, usar LEDs.
 Tempo Modo:<MODO>  
 xx:xx Temp:xx.xC
 
-Onde MODO = $\{\text{Inst.},\ \text{Méd.}\}$
+Onde MODO: {"Inst.", "Méd.", "Var."}
 ### Quando alertar:
 - Temperatura instantânea chega em determinado valor.
 - Média móvel chega em determinado valor.
