@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 163.8, "left": -13.2, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -150.17, "left": 35.2, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 32.75,
+      "left": 240,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:VSS", "mega:GND.2", "green", [ "v0" ] ],
+    [ "lcd1:VDD", "mega:5V", "green", [ "v0" ] ],
+    [ "lcd1:V0", "mega:GND.2", "green", [ "v0" ] ],
+    [ "lcd1:RS", "mega:8", "green", [ "v0" ] ],
+    [ "lcd1:RW", "mega:GND.2", "green", [ "v0" ] ],
+    [ "lcd1:E", "mega:9", "green", [ "v0" ] ],
+    [ "lcd1:D4", "mega:4", "green", [ "v0" ] ],
+    [ "lcd1:D5", "mega:5", "green", [ "v0" ] ],
+    [ "lcd1:D6", "mega:6", "green", [ "v0" ] ],
+    [ "lcd1:D7", "mega:7", "green", [ "v0" ] ],
+    [ "lcd1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "mega:5V", "green", [ "v0" ] ],
+    [ "lcd1:K", "mega:GND.3", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
