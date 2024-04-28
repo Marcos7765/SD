@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 75.4, "left": 391.2, "attrs": {} },
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 163.8, "left": -13.2, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -150.17, "left": 35.2, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 32.75,
+      "left": 240,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -47.7,
+      "left": 541.8,
+      "attrs": { "temperature": "48.5" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 167.15,
+      "left": 499.2,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 353.9, "left": 201.4, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 12,
+      "left": 1.8,
+      "attrs": { "volume": "0.1", "mode": "accurate" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 36.2,
+      "left": 412.8,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:VSS", "mega:GND.2", "green", [ "v307.2", "h93.85" ] ],
+    [ "lcd1:VDD", "mega:5V", "green", [ "v316.8", "h74.6" ] ],
+    [ "lcd1:V0", "mega:GND.2", "green", [ "v355.2", "h74.35" ] ],
+    [ "lcd1:RS", "mega:8", "green", [ "v172.8", "h68.1" ] ],
+    [ "lcd1:RW", "mega:GND.2", "green", [ "v345.6", "h55.35" ] ],
+    [ "lcd1:E", "mega:9", "green", [ "v163.2", "h39.1" ] ],
+    [ "lcd1:D4", "mega:4", "green", [ "v0" ] ],
+    [ "lcd1:D5", "mega:5", "green", [ "v0" ] ],
+    [ "lcd1:D6", "mega:6", "green", [ "v0" ] ],
+    [ "lcd1:D7", "mega:7", "green", [ "v0" ] ],
+    [ "lcd1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "mega:5V", "green", [ "v278.4", "h-147.5" ] ],
+    [ "lcd1:K", "mega:GND.3", "green", [ "v326.4", "h-40.65" ] ],
+    [ "mega:GND.5", "dht1:GND", "black", [ "v0.95", "h247" ] ],
+    [ "dht1:SDA", "bb1:17b.f", "green", [ "v0" ] ],
+    [ "bb1:17b.j", "mega:22", "green", [ "v19.2", "h-182.4", "v-29.9" ] ],
+    [ "dht1:VCC", "bb1:11b.f", "red", [ "v0", "h-57.6" ] ],
+    [ "mega:5V.1", "bb1:11b.j", "red", [ "v1", "h36.2", "v19.2" ] ],
+    [ "pot1:GND", "mega:GND.3", "black", [ "v9.6", "h-57.6" ] ],
+    [ "pot1:SIG", "mega:A0", "green", [ "v19.2", "h-144.4" ] ],
+    [ "mega:3.3V", "pot1:VCC", "red", [ "v102.9", "h107.8" ] ],
+    [ "mega:13", "bz1:2", "red", [ "v-28.8", "h-77.4" ] ],
+    [ "bz1:1", "mega:GND.1", "black", [ "v67.2", "h77" ] ],
+    [ "r2:1", "bb1:11b.h", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:17b.h", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
