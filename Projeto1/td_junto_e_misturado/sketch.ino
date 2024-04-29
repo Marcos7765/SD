@@ -362,7 +362,11 @@ void loop() {
 
   handleBts();
   if (cfg){
-    potTemp = readPot(20,50);
+    if (modo == VARIA){
+      potTemp = readPot(0,10);
+    }else{
+      potTemp = readPot(20,50);
+    }
     handleConfig(potTemp);
     printTemp(potTemp, lcd);
   }
