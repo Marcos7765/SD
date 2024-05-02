@@ -1,4 +1,3 @@
-#include <LiquidCrystal.h>
 #include <stdlib.h>
 #include<DHT.h>
 #include<util/delay.h>
@@ -6,6 +5,125 @@
 #include<avr/io.h>
 #include<avr/interrupt.h>
 #include <avr/eeprom.h>
+
+// ========================================================================
+// Configurando o LCD
+// ========================================================================
+
+// LCD - Pinos de controle
+#define CONTR_LCD PORTH
+#define RS PH5
+#define E PH6
+
+// LCD - Pinos de dados (8 bits)
+#define DADOS_LCD PORTC
+#define nibble_dados 1
+
+#define pulse_enable() _delay_us(1); set_bit(CONTR_LCD, E); _delay_us(1); clr_bit(CONTR_LCD, E); _delay_us(45);
+
+#define set_bit(y,bit) (y|=(1<<bit))   // Coloca em 1 o bit x da variável Y
+#define clr_bit(y,bit) (y&=~(1<<bit))  // Coloca em 0 o bit x da variável Y
+#define cpl_bit(y,bit) (y^=(1<<bit))   // Troca o estado lógico do bit x da variável Y
+#define tst_bit(y,bit) (y&(1<<bit))    // Retorna 0 ou 1 conforme leitura do bit
+
+void lcd_cmd(unsigned char c, char cd)
+{
+  // cd : indica se instrução (0) ou caractere (1)
+  if(cd == 0)
+    clr_bit(CONTR_LCD,RS);
+  else 
+    set_bit(CONTR_LCD,RS);
+
+  // Primeiro nibble de dados - 4 MSB
+  #if (nibble_dados)  
+    // Compila o código para os pinos de dados do LCD nos 4 MSB do PORT
+    DADOS_LCD = (DADOS_LCD & 0x0F)|(0xF0 & c);
+  #else 
+    // Compila o código para os pinos de dados do LCD nos 4 LSB do PORT
+    DADOS_LCD = (DADOS_LCD & 0xF0)|(c >> 4);
+  #endif
+  pulse_enable();
+  
+  // Segundo nibble de dados - 4 LSB
+  #if (nibble_dados) 
+    // Compila o código para os pinos de dados do LCD nos 4 MSB do PORT
+    DADOS_LCD = (DADOS_LCD & 0x0F) | (0xF0 & (c << 4));
+  #else 
+    // Compila o código para os pinos de dados do LCD nos 4 LSB do PORT
+    DADOS_LCD = (DADOS_LCD & 0xF0) | (0x0F & c);
+  #endif
+  pulse_enable();
+  
+  // Se for instrução de retorno ou limpeza espera LCD estar pronto
+  if((cd == 0) && (c < 4)) _delay_ms(2);
+}
+
+void lcd_init_4bits()
+{ 
+  // Como o LCD será só escrito, R/W é sempre zero.
+  clr_bit(CONTR_LCD,RS);  // RS em zero indicando que o dado para o LCD será uma instrução
+  clr_bit(CONTR_LCD,E);   // Pino de habilitação em zero
+
+  // Tempo para estabilizar a tensão do LCD, após VCC ultrapassar 4.5 V (na prática pode ser maior)
+  _delay_ms(20);
+  
+  // Interface de 8 bits
+  #if (nibble_dados)
+    DADOS_LCD = (DADOS_LCD & 0x0F) | 0x30;
+  #else
+    DADOS_LCD = (DADOS_LCD & 0xF0) | 0x03;
+  #endif
+  pulse_enable(); // Habilitação respeitando os tempos de resposta do LCD
+  _delay_ms(5);
+  pulse_enable();
+  _delay_us(200);
+  pulse_enable(); 
+
+  // Interface de 4 bits
+  // Deve ser enviado duas vezes (a outra está abaixo)
+  #if (nibble_dados)
+    DADOS_LCD = (DADOS_LCD & 0x0F) | 0x20;
+  #else
+    DADOS_LCD = (DADOS_LCD & 0xF0) | 0x02;
+  #endif
+  pulse_enable();
+
+  // Interface de 4 bits 2 linhas 
+  // Aqui se habilita as 2 linhas
+  lcd_cmd(0x28,0); 
+
+  // São enviados os 2 nibbles (0x2 e 0x8)
+  lcd_cmd(0x08,0); // Desliga o display
+  lcd_cmd(0x01,0); // Limpa todo o display
+  lcd_cmd(0x0C,0); // Mensagem aparente cursor inativo não piscando
+  lcd_cmd(0x80,0); // Inicializa cursor na primeira posição a esquerda
+}
+
+void lcd_write(char *c)
+{
+  for (; *c!=0;c++) lcd_cmd(*c,1);
+}
+
+void lcd_set_cursor(unsigned char linha, unsigned char coluna) {
+    unsigned char posicao = 0x80; // Endereço base da primeira linha do LCD
+
+    // Ajusta a posição base dependendo da linha
+    if (linha == 0) {
+        posicao = 0x80; // Endereço base da primeira linha do LCD
+    } else if (linha == 1) {
+        posicao = 0xC0; // Endereço base da segunda linha do LCD
+    }
+
+    // Ajusta a posição base dependendo da coluna
+    posicao += coluna - 1;
+
+    // Envia o comando para definir a posição do cursor no LCD
+    lcd_cmd(posicao, 0);
+}
+
+// ========================================================================
+// Fim da configuração do LCD
+// ========================================================================
 
 enum MODO {
   INSTA=0,
@@ -30,7 +148,6 @@ uint8_t cfgMax = true;
 uint8_t modo = INSTA;
 float maxVals[3] = {42.0, 40.5, 5.0};
 float minVals[2] = {35.0, 35.5};
-LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 struct Time time;
 
 #define ST
@@ -145,28 +262,35 @@ inline void incrementTime(struct Time *time) {
     }
 }
 
-inline void printTemp(float temp, LiquidCrystal &lcd) {
-  lcd.setCursor(11, 1);
-  lcd.print(String(temp, 1));
-  lcd.setCursor(15, 1);
-  lcd.print("C");
+inline void printTemp(float temp) {
+  char tempStr[6]; // Buffer para armazenar a string de temperatura
+  dtostrf(temp, 5, 2, tempStr); // Formata o valor de ponto flutuante em uma string
+  lcd_set_cursor(1, 12);
+  lcd_write(tempStr);
+  lcd_set_cursor(1, 16);
+  lcd_write("C");
 }
 
-inline void printMode(unsigned int mode, LiquidCrystal &lcd) {
-  const char testeooo[][5] = {"INST","MED ","VAR "};
-  lcd.setCursor(6, 1);
-  //lcd.print(String("0") + String(mode) + " |");
-  lcd.print(String(testeooo[mode]) + "|");
+inline void printMode(unsigned int mode) {
+  const char *modes[] = {"INST","MED ","VAR "};
+  lcd_set_cursor(1, 7);
+  lcd_write(modes[mode]);
+  lcd_write("|");
 }
 
-inline void printTime(struct Time *time, LiquidCrystal &lcd) {
-  lcd.setCursor(0,1);
-  lcd.print(String(time->minute) + ":" + (time->second < 10 ? "0" : "") + String(time->second) + " |");
+inline void printTime(struct Time *time) {
+  char timeStr[9]; // Buffer para armazenar a string de tempo (HH:MM:SS)
+  snprintf(timeStr, 9, "%02d:%02d", time->minute, time->second); // Formata o tempo
+  lcd_set_cursor(1, 6);
+  lcd_write("|");
+  lcd_set_cursor(1, 1);
+  lcd_write(timeStr);
 }
 
-inline void printCfg(LiquidCrystal &lcd) {
-  lcd.setCursor(0,1);
-  lcd.print((cfgMax || (modo==VARIA)) ? String(" Max.|") : String(" Min.|"));
+inline void printCfg() {
+  const char *cfgLabel = (cfgMax || (modo==VARIA)) ? " Max.|" : " Min.|";
+  lcd_set_cursor(1, 1);
+  lcd_write(cfgLabel);
 }
 
 //LÓGICA DOS BOTÕES
@@ -183,16 +307,16 @@ inline void modeButton(){
   if (cfg){
     if (cfgMax){
       if (modo != VARIA){cfgMax = false;}
-      else{switchMode();}
+      else{return;}
     } else{
       cfgMax = true;
       switchMode();
     }
-    printCfg(lcd);
+    printCfg();
   } else{
     switchMode();
   }
-  printMode(modo, lcd);
+  printMode(modo);
 }
 
 uint8_t btsState[2] = {0,0};
@@ -302,13 +426,13 @@ void handleTemp(){
 void printStat(){
   switch (modo) {
     case INSTA:
-      printTemp(temperaturas[0], lcd);
+      printTemp(temperaturas[0]);
     break;
     case MEDIA:
-      printTemp(mtmp, lcd);
+      printTemp(mtmp);
     break;
     case VARIA:
-      printTemp(gtVar, lcd);
+      printTemp(gtVar);
     break;
   }
 }
@@ -316,43 +440,45 @@ void printStat(){
 float potTemp;
 
 void setup() {
-  //time = (struct Time *)malloc(sizeof(struct Time));
   Serial.begin(9600);
-  time.second = 0;
-  time.minute = 0;
-  lcd.begin(16, 2);
-  PT_setup();
-  BZ_setup();
-  ST_setup();
+  time.second = 0;  // Zerar segundo do timer
+  time.minute = 0;  // Zerar minuto do timer
+  DDRH = 0xff;      // Configurar portas de saida do LCD
+  DDRC = 0xff;      // Configurar portas de saida do LCD
+  lcd_init_4bits(); // Iniciar LCD
+  PT_setup();       // Setup do potenciômetro
+  BZ_setup();       // Setup do buzzer
+  ST_setup();       // Setup do sensor
   BTS_setup();
   int_setup();
   potTemp = readPot(20,50);
-  _delay_ms(10); //evitar da interrupção estar síncrona com printTemp
+  _delay_ms(10);
 }
 
 uint8_t checar = 0;
 
 ISR(TIMER1_COMPA_vect){
-  lcd.setCursor(0, 0);
   if (cfg){
-    lcd.print(" Cfg |");
-    printCfg(lcd);
+    lcd_set_cursor(0, 2);
+    lcd_write("Cfg |");
+    printCfg();
   } else{
-    lcd.print("Tempo|");
+    lcd_set_cursor(0, 1);
+    lcd_write("Tempo|");
     if (checar==0) {getTemp();} //vamos coletar amostras
     checar = (checar+1)%tempo_amostra_s;
     handleTemp();
     printStat();
-    printTime(&time, lcd);
+    printTime(&time);
   }
 
-  lcd.setCursor(6, 0);
-  lcd.print("Modo|");
+  lcd_set_cursor(0, 7);
+  lcd_write("Modo|");
 
-  lcd.setCursor(11, 0);
-  lcd.print("Temp");
+  lcd_set_cursor(0, 12);
+  lcd_write("Temp");
 
-  printMode(modo, lcd);
+  printMode(modo);
 
   //desnecessariamente rodaria enquanto no cfg
   incrementTime(&time);
@@ -368,7 +494,7 @@ void loop() {
       potTemp = readPot(20,50);
     }
     handleConfig(potTemp);
-    printTemp(potTemp, lcd);
+    printTemp(potTemp);
   }
   _delay_ms(debounce_ms);
 }
