@@ -137,7 +137,7 @@ struct Time {
 };
 
 //PARÂMETROS
-#define debounce_ms 50
+#define debounce_ms 200
 #define tempo_amostra_s 5
 
 // ---------- VARIÁVEIS GLOBAIS ----------
