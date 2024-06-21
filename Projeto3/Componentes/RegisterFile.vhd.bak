@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity RegisterFile is
+    Port (
+        clk : in STD_LOGIC;
+        wr_en : in STD_LOGIC;
+        rd_addr : in STD_LOGIC_VECTOR(7 downto 0);
+        wr_addr : in STD_LOGIC_VECTOR(7 downto 0);
+        data_in : in STD_LOGIC_VECTOR(7 downto 0);
+        data_out : out STD_LOGIC_VECTOR(7 downto 0)
+    );
+end RegisterFile;
+
+architecture Behavioral of RegisterFile is
+    type mem_array is array (0 to 255) of STD_LOGIC_VECTOR(7 downto 0);
+    signal RF : mem_array := (others => (others => '0')); -- Register File array
+
+begin
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if wr_en = '1' then
+                RF(conv_integer(wr_addr)) <= data_in;
+            end if;
+        end if;
+    end process;
+
+    data_out <= RF(conv_integer(rd_addr));
+end Behavioral;
+

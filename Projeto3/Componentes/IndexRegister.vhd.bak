@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity IndexRegister is
+    Port (
+        clk : in STD_LOGIC;
+        clear : in STD_LOGIC;
+        increment : in STD_LOGIC;
+        data_out : out STD_LOGIC_VECTOR(8 downto 0)
+    );
+end IndexRegister;
+
+architecture Behavioral of IndexRegister is
+    signal reg : STD_LOGIC_VECTOR(8 downto 0) := (others => '0');
+begin
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if clear = '1' then
+                reg <= (others => '0');
+            elsif increment = '1' then
+                reg <= reg + 1;
+            end if;
+        end if;
+    end process;
+    
+    data_out <= reg;
+end Behavioral;
+

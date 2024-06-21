@@ -1,0 +1,139 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Datapath is
+    Port (
+        clk : in STD_LOGIC;
+        index_inc : in STD_LOGIC;
+        index_clr : in STD_LOGIC;
+        sum_ld : in STD_LOGIC;
+        sum_clr : in STD_LOGIC;
+        sadreg_ld : in STD_LOGIC;
+        sadreg_clr : in STD_LOGIC;
+        A_data : in STD_LOGIC_VECTOR(7 downto 0);
+        B_data : in STD_LOGIC_VECTOR(7 downto 0);
+        sad : out STD_LOGIC_VECTOR(31 downto 0);
+        AB_addr : out STD_LOGIC_VECTOR(8 downto 0);
+        index_lt_256 : out STD_LOGIC
+    );
+end Datapath;
+
+architecture Behavioral of Datapath is
+
+    signal sub_result : STD_LOGIC_VECTOR(7 downto 0);
+    signal abs_result : STD_LOGIC_VECTOR(7 downto 0);
+    signal sum_result : STD_LOGIC_VECTOR(31 downto 0);
+    signal sum_reg_output : STD_LOGIC_VECTOR(31 downto 0);
+    signal index_output : STD_LOGIC_VECTOR(8 downto 0);
+
+    component Subtractor is
+        Port (
+            A : in STD_LOGIC_VECTOR(7 downto 0);
+            B : in STD_LOGIC_VECTOR(7 downto 0);
+            Result : out STD_LOGIC_VECTOR(7 downto 0)
+        );
+    end component;
+
+    component Abs is
+        Port (
+            A : in STD_LOGIC_VECTOR(7 downto 0);
+            Result : out STD_LOGIC_VECTOR(7 downto 0)
+        );
+    end component;
+
+    component CustomAdder is
+        Port (
+            A : in STD_LOGIC_VECTOR(31 downto 0);
+            B : in STD_LOGIC_VECTOR(7 downto 0);
+            Result : out STD_LOGIC_VECTOR(31 downto 0)
+        );
+    end component;
+
+    component IndexRegister is
+        Port (
+            clk : in STD_LOGIC;
+            clear : in STD_LOGIC;
+            increment : in STD_LOGIC;
+            data_out : out STD_LOGIC_VECTOR(8 downto 0)
+        );
+    end component;
+
+    component Comparator is
+        Port (
+            A : in STD_LOGIC_VECTOR(8 downto 0);
+            Output : out STD_LOGIC
+        );
+    end component;
+
+    component DataRegister is
+        Port (
+            clk : in STD_LOGIC;
+            load : in STD_LOGIC;
+            clear : in STD_LOGIC;
+            data_in : in STD_LOGIC_VECTOR(31 downto 0);
+            data_out : out STD_LOGIC_VECTOR(31 downto 0)
+        );
+    end component;
+
+begin
+
+    Subtractor_inst : Subtractor
+        Port map (
+            A => A_data,
+            B => B_data,
+            Result => sub_result
+        );
+
+    Abs_inst : Abs
+        Port map (
+            A => sub_result,
+            Result => abs_result
+        );
+
+    CustomAdder_inst : CustomAdder
+        Port map (
+            A => sum_reg_output,
+            B => abs_result,
+            Result => sum_result
+        );
+
+    IndexRegister_inst : IndexRegister
+        Port map (
+            clk => clk,
+            clear => index_clr,
+            increment => index_inc,
+            data_out => index_output
+        );
+
+    Comparator_inst : Comparator
+        Port map (
+            A => index_output,
+            Output => index_lt_256
+        );
+
+    CustomAdderRegister_inst : DataRegister
+        Port map (
+            clk => clk,
+            load => sum_ld,
+            clear => sum_clr,
+            data_in => sum_result,
+            data_out => sum_reg_output
+        );
+
+    SadRegister_inst : DataRegister
+        Port map (
+            clk => clk,
+            load => sadreg_ld,
+            clear => sadreg_clr,
+            data_in => sum_reg_output,
+            data_out => sad
+        );
+
+    -- Outputs
+    AB_addr <= index_output;
+    index_lt_256 <= Comparator_inst.Output;
+    sad <= SadRegister_inst.data_out;
+
+end Behavioral;
+

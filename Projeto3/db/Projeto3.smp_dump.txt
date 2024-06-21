@@ -1,0 +1,9 @@
+
+State Machine - |SAD|Controller:CTRL|stateReg
+Name stateReg.S0 stateReg.S4 stateReg.S3 stateReg.S2 stateReg.S1 stateReg.RST 
+stateReg.RST 0 0 0 0 0 0 
+stateReg.S1 0 0 0 0 1 1 
+stateReg.S2 0 0 0 1 0 1 
+stateReg.S3 0 0 1 0 0 1 
+stateReg.S4 0 1 0 0 0 1 
+stateReg.S0 1 0 0 0 0 1 
