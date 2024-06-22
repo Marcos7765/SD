@@ -7,7 +7,7 @@ entity Subtractor is
     Port (
         A : in STD_LOGIC_VECTOR(7 downto 0);
         B : in STD_LOGIC_VECTOR(7 downto 0);
-        Result : out STD_LOGIC_VECTOR(8 downto 0)
+        Result : out STD_LOGIC_VECTOR(7 downto 0)
     );
 end Subtractor;
 
@@ -15,7 +15,7 @@ architecture Behavioral of Subtractor is
 begin
     process(A, B)
     begin
-        Result <= ("0" & A) - ("0" & B);
+        Result <= A - B;
     end process;
 end Behavioral;
 

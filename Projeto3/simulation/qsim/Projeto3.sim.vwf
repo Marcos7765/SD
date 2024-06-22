@@ -1425,7 +1425,10 @@ TRANSITION_LIST("sad[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 600.0;
+		LEVEL 0 FOR 45.0;
+		LEVEL 1 FOR 8.0;
+		LEVEL 0 FOR 44.0;
+		LEVEL 1 FOR 503.0;
 	}
 }
 TRANSITION_LIST("sad[8]")
@@ -1441,50 +1444,13 @@ TRANSITION_LIST("sad[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 600.0;
+		LEVEL 0 FOR 45.0;
+		LEVEL 1 FOR 8.0;
+		LEVEL 0 FOR 44.0;
+		LEVEL 1 FOR 503.0;
 	}
 }
 TRANSITION_LIST("sad[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 600.0;
-	}
-}
-TRANSITION_LIST("sad[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 600.0;
-	}
-}
-TRANSITION_LIST("sad[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 600.0;
-	}
-}
-TRANSITION_LIST("sad[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 600.0;
-	}
-}
-TRANSITION_LIST("sad[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 600.0;
-	}
-}
-TRANSITION_LIST("sad[1]")
 {
 	NODE
 	{
@@ -1493,6 +1459,58 @@ TRANSITION_LIST("sad[1]")
 		LEVEL 1 FOR 8.0;
 		LEVEL 0 FOR 44.0;
 		LEVEL 1 FOR 503.0;
+	}
+}
+TRANSITION_LIST("sad[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.0;
+		LEVEL 1 FOR 8.0;
+		LEVEL 0 FOR 44.0;
+		LEVEL 1 FOR 503.0;
+	}
+}
+TRANSITION_LIST("sad[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.0;
+		LEVEL 1 FOR 8.0;
+		LEVEL 0 FOR 44.0;
+		LEVEL 1 FOR 503.0;
+	}
+}
+TRANSITION_LIST("sad[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.0;
+		LEVEL 1 FOR 8.0;
+		LEVEL 0 FOR 44.0;
+		LEVEL 1 FOR 503.0;
+	}
+}
+TRANSITION_LIST("sad[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.0;
+		LEVEL 1 FOR 8.0;
+		LEVEL 0 FOR 44.0;
+		LEVEL 1 FOR 503.0;
+	}
+}
+TRANSITION_LIST("sad[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 600.0;
 	}
 }
 TRANSITION_LIST("sad[0]")

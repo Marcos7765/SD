@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Jun 21 09:07:54 2024
+Fitter Status : Successful - Sat Jun 22 18:59:55 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Projeto3
 Top-level Entity Name : SAD
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 88 / 33,216 ( < 1 % )
+Total logic elements : 89 / 33,216 ( < 1 % )
     Total combinational functions : 88 / 33,216 ( < 1 % )
     Dedicated logic registers : 79 / 33,216 ( < 1 % )
 Total registers : 79

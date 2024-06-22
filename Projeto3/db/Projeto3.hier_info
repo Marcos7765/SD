@@ -165,6 +165,7 @@ Result[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Result[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Result[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Result[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Result[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SAD|Datapath:DP|Absl:Abs_inst
@@ -182,16 +183,17 @@ A[5] => Result.DATAA
 A[5] => Add0.IN13
 A[6] => Result.DATAA
 A[6] => Add0.IN12
-A[7] => Result.OUTPUTSELECT
-A[7] => Result.OUTPUTSELECT
-A[7] => Result.OUTPUTSELECT
-A[7] => Result.OUTPUTSELECT
-A[7] => Result.OUTPUTSELECT
-A[7] => Result.OUTPUTSELECT
-A[7] => Result.OUTPUTSELECT
-A[7] => Result.OUTPUTSELECT
+A[7] => Result.DATAA
 A[7] => Add0.IN10
 A[7] => Add0.IN11
+A[8] => Result.OUTPUTSELECT
+A[8] => Result.OUTPUTSELECT
+A[8] => Result.OUTPUTSELECT
+A[8] => Result.OUTPUTSELECT
+A[8] => Result.OUTPUTSELECT
+A[8] => Result.OUTPUTSELECT
+A[8] => Result.OUTPUTSELECT
+A[8] => Result.OUTPUTSELECT
 Result[0] <= Result.DB_MAX_OUTPUT_PORT_TYPE
 Result[1] <= Result.DB_MAX_OUTPUT_PORT_TYPE
 Result[2] <= Result.DB_MAX_OUTPUT_PORT_TYPE

@@ -1,5 +1,5 @@
 Fitter report for Projeto3
-Fri Jun 21 09:07:54 2024
+Sat Jun 22 18:59:55 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,14 +62,14 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jun 21 09:07:54 2024           ;
+; Fitter Status                      ; Successful - Sat Jun 22 18:59:55 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Projeto3                                        ;
 ; Top-level Entity Name              ; SAD                                             ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 88 / 33,216 ( < 1 % )                           ;
+; Total logic elements               ; 89 / 33,216 ( < 1 % )                           ;
 ;     Total combinational functions  ; 88 / 33,216 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 79 / 33,216 ( < 1 % )                           ;
 ; Total registers                    ; 79                                              ;
@@ -188,16 +188,16 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 88 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 9                     ;
-;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 79                    ;
+; Total logic elements                        ; 89 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 10                    ;
+;     -- Register only                        ; 1                     ;
+;     -- Combinational with a register        ; 78                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
 ;     -- 4 input functions                    ; 6                     ;
-;     -- 3 input functions                    ; 4                     ;
-;     -- <=2 input functions                  ; 78                    ;
-;     -- Register only                        ; 0                     ;
+;     -- 3 input functions                    ; 11                    ;
+;     -- <=2 input functions                  ; 71                    ;
+;     -- Register only                        ; 1                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
 ;     -- normal mode                          ; 50                    ;
@@ -207,7 +207,7 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ;     -- Dedicated logic registers            ; 79 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 8 / 2,076 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 7 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 47 / 475 ( 10 % )     ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
@@ -226,8 +226,8 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 79                    ;
 ; Highest non-global fan-out                  ; 41                    ;
-; Total fan-out                               ; 511                   ;
-; Average fan-out                             ; 2.33                  ;
+; Total fan-out                               ; 519                   ;
+; Average fan-out                             ; 2.36                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -240,16 +240,16 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 88 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 9                    ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 79                   ; 0                              ;
+; Total logic elements                        ; 89 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 10                   ; 0                              ;
+;     -- Register only                        ; 1                    ; 0                              ;
+;     -- Combinational with a register        ; 78                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 6                    ; 0                              ;
-;     -- 3 input functions                    ; 4                    ; 0                              ;
-;     -- <=2 input functions                  ; 78                   ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
+;     -- 3 input functions                    ; 11                   ; 0                              ;
+;     -- <=2 input functions                  ; 71                   ; 0                              ;
+;     -- Register only                        ; 1                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
 ;     -- normal mode                          ; 50                   ; 0                              ;
@@ -258,7 +258,7 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; Total registers                             ; 79                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 79 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 8 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 7 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 47                   ; 0                              ;
@@ -274,7 +274,7 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 511                  ; 0                              ;
+;     -- Total Connections                    ; 519                  ; 0                              ;
 ;     -- Registered Connections               ; 192                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -318,50 +318,50 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name             ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; AB_addr_watch[0] ; D19   ; 4        ; 53           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[1] ; A20   ; 4        ; 55           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[2] ; A19   ; 4        ; 53           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[3] ; K17   ; 4        ; 59           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[4] ; B19   ; 4        ; 53           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[5] ; B21   ; 4        ; 59           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[6] ; C19   ; 4        ; 53           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[7] ; D20   ; 4        ; 57           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AB_addr_watch[8] ; J18   ; 4        ; 59           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; debug[0]         ; F18   ; 4        ; 50           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; debug[1]         ; J16   ; 4        ; 57           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; debug[2]         ; K16   ; 4        ; 57           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[0]           ; D21   ; 4        ; 63           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[10]          ; B22   ; 4        ; 61           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[11]          ; C22   ; 4        ; 63           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[12]          ; D26   ; 5        ; 65           ; 31           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[13]          ; B23   ; 4        ; 61           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[14]          ; B25   ; 5        ; 65           ; 32           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[15]          ; C25   ; 5        ; 65           ; 32           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[16]          ; G21   ; 5        ; 65           ; 33           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[17]          ; H21   ; 5        ; 65           ; 33           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[18]          ; E24   ; 5        ; 65           ; 33           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[19]          ; E26   ; 5        ; 65           ; 31           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[1]           ; J22   ; 5        ; 65           ; 31           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[20]          ; D23   ; 5        ; 65           ; 34           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[21]          ; F23   ; 5        ; 65           ; 30           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[22]          ; F20   ; 5        ; 65           ; 34           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[23]          ; A21   ; 4        ; 59           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[24]          ; E20   ; 4        ; 55           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[25]          ; J21   ; 5        ; 65           ; 30           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[26]          ; G22   ; 5        ; 65           ; 33           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[27]          ; F24   ; 5        ; 65           ; 30           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[28]          ; E23   ; 5        ; 65           ; 33           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[29]          ; E22   ; 5        ; 65           ; 34           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[2]           ; C21   ; 4        ; 63           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[30]          ; B20   ; 4        ; 55           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[31]          ; F21   ; 5        ; 65           ; 34           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[3]           ; D25   ; 5        ; 65           ; 31           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[4]           ; A22   ; 4        ; 61           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[5]           ; B24   ; 5        ; 65           ; 32           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[6]           ; C23   ; 4        ; 63           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[7]           ; C24   ; 5        ; 65           ; 32           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[8]           ; A23   ; 4        ; 61           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; sad[9]           ; E25   ; 5        ; 65           ; 31           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[0] ; F14   ; 4        ; 35           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[1] ; E15   ; 4        ; 40           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[2] ; D15   ; 4        ; 40           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[3] ; A17   ; 4        ; 42           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[4] ; D16   ; 4        ; 40           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[5] ; F13   ; 4        ; 35           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[6] ; G14   ; 4        ; 35           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[7] ; C15   ; 4        ; 37           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AB_addr_watch[8] ; G16   ; 4        ; 44           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; debug[0]         ; G13   ; 4        ; 35           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; debug[1]         ; F16   ; 4        ; 44           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; debug[2]         ; B17   ; 4        ; 42           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[0]           ; D18   ; 4        ; 50           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[10]          ; E18   ; 4        ; 50           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[11]          ; F17   ; 4        ; 48           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[12]          ; C17   ; 4        ; 46           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[13]          ; E20   ; 4        ; 55           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[14]          ; B18   ; 4        ; 46           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[15]          ; D20   ; 4        ; 57           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[16]          ; H16   ; 4        ; 42           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[17]          ; F18   ; 4        ; 50           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[18]          ; K16   ; 4        ; 57           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[19]          ; F15   ; 4        ; 44           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[1]           ; B19   ; 4        ; 53           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[20]          ; B15   ; 4        ; 37           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[21]          ; J16   ; 4        ; 57           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[22]          ; G15   ; 4        ; 44           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[23]          ; H15   ; 4        ; 42           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[24]          ; K17   ; 4        ; 59           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[25]          ; B16   ; 4        ; 37           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[26]          ; G18   ; 4        ; 50           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[27]          ; B14   ; 4        ; 33           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[28]          ; C19   ; 4        ; 53           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[29]          ; A19   ; 4        ; 53           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[2]           ; A18   ; 4        ; 46           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[30]          ; D19   ; 4        ; 53           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[31]          ; C16   ; 4        ; 37           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[3]           ; B20   ; 4        ; 55           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[4]           ; G17   ; 4        ; 48           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[5]           ; A20   ; 4        ; 55           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[6]           ; J17   ; 4        ; 48           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[7]           ; J18   ; 4        ; 59           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[8]           ; H17   ; 4        ; 48           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; sad[9]           ; D17   ; 4        ; 46           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -373,8 +373,8 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; 1        ; 2 / 64 ( 3 % )   ; 3.3V          ; --           ;
 ; 2        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
 ; 3        ; 1 / 56 ( 2 % )   ; 3.3V          ; --           ;
-; 4        ; 23 / 58 ( 40 % ) ; 3.3V          ; --           ;
-; 5        ; 21 / 65 ( 32 % ) ; 3.3V          ; --           ;
+; 4        ; 44 / 58 ( 76 % ) ; 3.3V          ; --           ;
+; 5        ; 0 / 65 ( 0 % )   ; 3.3V          ; --           ;
 ; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
 ; 7        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
 ; 8        ; 0 / 56 ( 0 % )   ; 3.3V          ; --           ;
@@ -401,13 +401,13 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; A14      ; 427        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; A17      ; 412        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A18      ; 406        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A19      ; 394        ; 4        ; AB_addr_watch[2]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A20      ; 390        ; 4        ; AB_addr_watch[1]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A21      ; 382        ; 4        ; sad[23]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A22      ; 379        ; 4        ; sad[4]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A23      ; 378        ; 4        ; sad[8]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A17      ; 412        ; 4        ; AB_addr_watch[3]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A18      ; 406        ; 4        ; sad[2]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A19      ; 394        ; 4        ; sad[29]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A20      ; 390        ; 4        ; sad[5]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A21      ; 382        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A22      ; 379        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A23      ; 378        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A24      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A25      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA1      ; 107        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -577,18 +577,18 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; B14      ; 428        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B15      ; 420        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B16      ; 419        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B17      ; 411        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B18      ; 405        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B19      ; 393        ; 4        ; AB_addr_watch[4]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B20      ; 389        ; 4        ; sad[30]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B21      ; 381        ; 4        ; AB_addr_watch[5]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B22      ; 380        ; 4        ; sad[10]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B23      ; 377        ; 4        ; sad[13]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B24      ; 363        ; 5        ; sad[5]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; B25      ; 362        ; 5        ; sad[14]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; B14      ; 428        ; 4        ; sad[27]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B15      ; 420        ; 4        ; sad[20]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B16      ; 419        ; 4        ; sad[25]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B17      ; 411        ; 4        ; debug[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B18      ; 405        ; 4        ; sad[14]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B19      ; 393        ; 4        ; sad[1]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B20      ; 389        ; 4        ; sad[3]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B21      ; 381        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B22      ; 380        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B23      ; 377        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B24      ; 363        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; B25      ; 362        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; B26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C2       ; 6          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -604,17 +604,17 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; C12      ; 434        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C13      ; 431        ; 3        ; go                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C15      ; 421        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C16      ; 418        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C17      ; 404        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C15      ; 421        ; 4        ; AB_addr_watch[7]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C16      ; 418        ; 4        ; sad[31]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C17      ; 404        ; 4        ; sad[12]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C18      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C19      ; 391        ; 4        ; AB_addr_watch[6]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C19      ; 391        ; 4        ; sad[28]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C20      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C21      ; 375        ; 4        ; sad[2]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C22      ; 374        ; 4        ; sad[11]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C23      ; 373        ; 4        ; sad[6]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C24      ; 360        ; 5        ; sad[7]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; C25      ; 361        ; 5        ; sad[15]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C21      ; 375        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C22      ; 374        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C23      ; 373        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C24      ; 360        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C25      ; 361        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D1       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D2       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -630,18 +630,18 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D13      ; 432        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D16      ; 415        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; D17      ; 403        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D18      ; 396        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D19      ; 392        ; 4        ; AB_addr_watch[0]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D20      ; 387        ; 4        ; AB_addr_watch[7]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D21      ; 376        ; 4        ; sad[0]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D15      ; 417        ; 4        ; AB_addr_watch[2]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D16      ; 415        ; 4        ; AB_addr_watch[4]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D17      ; 403        ; 4        ; sad[9]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D18      ; 396        ; 4        ; sad[0]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D19      ; 392        ; 4        ; sad[30]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D20      ; 387        ; 4        ; sad[15]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D21      ; 376        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D22      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; D23      ; 369        ; 5        ; sad[20]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D23      ; 369        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D24      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D25      ; 358        ; 5        ; sad[3]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; D26      ; 359        ; 5        ; sad[12]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D25      ; 358        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D26      ; 359        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E1       ; 20         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E2       ; 19         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E3       ; 0          ; 2        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
@@ -656,18 +656,18 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; E12      ; 444        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E13      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E15      ; 416        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; E15      ; 416        ; 4        ; AB_addr_watch[1]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E16      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E17      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E18      ; 395        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; E18      ; 395        ; 4        ; sad[10]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; E20      ; 388        ; 4        ; sad[24]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E20      ; 388        ; 4        ; sad[13]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E21      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; E22      ; 370        ; 5        ; sad[29]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E23      ; 365        ; 5        ; sad[28]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E24      ; 364        ; 5        ; sad[18]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E25      ; 355        ; 5        ; sad[9]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E26      ; 356        ; 5        ; sad[19]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E22      ; 370        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E23      ; 365        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E24      ; 364        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E25      ; 355        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E26      ; 356        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F1       ; 29         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F3       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -680,18 +680,18 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; F10      ; 462        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F11      ; 454        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F12      ; 440        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F13      ; 423        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F14      ; 425        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F15      ; 409        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F16      ; 408        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F17      ; 401        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F18      ; 398        ; 4        ; debug[0]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F13      ; 423        ; 4        ; AB_addr_watch[5]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F14      ; 425        ; 4        ; AB_addr_watch[0]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F15      ; 409        ; 4        ; sad[19]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F16      ; 408        ; 4        ; debug[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F17      ; 401        ; 4        ; sad[11]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F18      ; 398        ; 4        ; sad[17]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F19      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F20      ; 372        ; 5        ; sad[22]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F21      ; 371        ; 5        ; sad[31]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F20      ; 372        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F21      ; 371        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F23      ; 353        ; 5        ; sad[21]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F24      ; 354        ; 5        ; sad[27]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F23      ; 353        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F24      ; 354        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F25      ; 350        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F26      ; 349        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G1       ; 30         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -706,16 +706,16 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; G10      ; 461        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G11      ; 446        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G12      ; 439        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G13      ; 422        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G14      ; 424        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G15      ; 410        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G16      ; 407        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G17      ; 402        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G18      ; 397        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G13      ; 422        ; 4        ; debug[0]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G14      ; 424        ; 4        ; AB_addr_watch[6]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G15      ; 410        ; 4        ; sad[22]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 407        ; 4        ; AB_addr_watch[8]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G17      ; 402        ; 4        ; sad[4]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G18      ; 397        ; 4        ; sad[26]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G19      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G20      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; G21      ; 368        ; 5        ; sad[16]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G22      ; 367        ; 5        ; sad[26]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G21      ; 368        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G22      ; 367        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G23      ; 346        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G24      ; 345        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G25      ; 343        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -734,13 +734,13 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; H12      ; 455        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H15      ; 414        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H16      ; 413        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H17      ; 400        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; H15      ; 414        ; 4        ; sad[23]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H16      ; 413        ; 4        ; sad[16]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H17      ; 400        ; 4        ; sad[8]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H18      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; H19      ; 335        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H20      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; H21      ; 366        ; 5        ; sad[17]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H21      ; 366        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H22      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H23      ; 341        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H24      ; 340        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -761,13 +761,13 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; J13      ; 442        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J14      ; 441        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J15      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; J16      ; 385        ; 4        ; debug[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J17      ; 399        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J18      ; 383        ; 4        ; AB_addr_watch[8]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J16      ; 385        ; 4        ; sad[21]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J17      ; 399        ; 4        ; sad[6]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J18      ; 383        ; 4        ; sad[7]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J19      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J20      ; 351        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J21      ; 352        ; 5        ; sad[25]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J22      ; 357        ; 5        ; sad[1]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J21      ; 352        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J22      ; 357        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J23      ; 339        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J24      ; 338        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J25      ; 327        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -787,8 +787,8 @@ The pin-out file can be found in C:/Users/mvbir/Documentos/SD/Projeto3/output_fi
 ; K13      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K14      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K15      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; K16      ; 386        ; 4        ; debug[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; K17      ; 384        ; 4        ; AB_addr_watch[3]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K16      ; 386        ; 4        ; sad[18]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K17      ; 384        ; 4        ; sad[24]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; K18      ; 334        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K19      ; 333        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1104,12 +1104,12 @@ Note: User assignments will override these defaults. The user specified values a
 +-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                    ; Library Name ;
 +-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------+--------------+
-; |SAD                                          ; 88 (0)      ; 79 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 47   ; 0            ; 9 (0)        ; 0 (0)             ; 79 (0)           ; |SAD                                                   ;              ;
-;    |Controller:CTRL|                          ; 11 (11)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 6 (6)            ; |SAD|Controller:CTRL                                   ; work         ;
-;    |Datapath:DP|                              ; 78 (0)      ; 73 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 74 (0)           ; |SAD|Datapath:DP                                       ; work         ;
+; |SAD                                          ; 89 (0)      ; 79 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 47   ; 0            ; 10 (0)       ; 1 (0)             ; 78 (0)           ; |SAD                                                   ;              ;
+;    |Controller:CTRL|                          ; 11 (11)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 1 (1)             ; 5 (5)            ; |SAD|Controller:CTRL                                   ; work         ;
+;    |Datapath:DP|                              ; 78 (0)      ; 73 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 73 (0)           ; |SAD|Datapath:DP                                       ; work         ;
 ;       |Absl:Abs_inst|                         ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |SAD|Datapath:DP|Absl:Abs_inst                         ; work         ;
 ;       |Comparator:Comparator_inst|            ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |SAD|Datapath:DP|Comparator:Comparator_inst            ; work         ;
-;       |DataRegister:CustomAdderRegister_inst| ; 33 (33)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 33 (33)          ; |SAD|Datapath:DP|DataRegister:CustomAdderRegister_inst ; work         ;
+;       |DataRegister:CustomAdderRegister_inst| ; 33 (33)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 32 (32)          ; |SAD|Datapath:DP|DataRegister:CustomAdderRegister_inst ; work         ;
 ;       |DataRegister:SadRegister_inst|         ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |SAD|Datapath:DP|DataRegister:SadRegister_inst         ; work         ;
 ;       |IndexRegister:IndexRegister_inst|      ; 9 (9)       ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 9 (9)            ; |SAD|Datapath:DP|IndexRegister:IndexRegister_inst      ; work         ;
 +-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------+--------------+
@@ -1187,10 +1187,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                             ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Controller:CTRL|debug[2]                                         ; LCCOMB_X59_Y35_N22 ; 33      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; Controller:CTRL|i_clr                                            ; LCCOMB_X60_Y35_N20 ; 41      ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; Controller:CTRL|stateReg.S3                                      ; LCFF_X59_Y35_N7    ; 12      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; Datapath:DP|DataRegister:CustomAdderRegister_inst|data_out[1]~34 ; LCCOMB_X60_Y35_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; Controller:CTRL|debug[2]                                         ; LCCOMB_X44_Y33_N30 ; 33      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; Controller:CTRL|i_clr                                            ; LCCOMB_X45_Y34_N20 ; 41      ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; Controller:CTRL|stateReg.S3                                      ; LCFF_X45_Y33_N27   ; 12      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; Datapath:DP|DataRegister:CustomAdderRegister_inst|data_out[1]~34 ; LCCOMB_X45_Y33_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; clk                                                              ; PIN_P2             ; 79      ; Clock                     ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 ; reset                                                            ; PIN_P1             ; 6       ; Async. clear              ; yes    ; Global Clock         ; GCLK1            ; --                        ;
 +------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
@@ -1216,6 +1216,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Controller:CTRL|debug[2]                                          ; 33      ;
 ; Datapath:DP|DataRegister:CustomAdderRegister_inst|data_out[1]~34  ; 32      ;
 ; Controller:CTRL|stateReg.S3                                       ; 12      ;
+; Datapath:DP|Absl:Abs_inst|Result[0]~16                            ; 8       ;
 ; Datapath:DP|IndexRegister:IndexRegister_inst|Creg[3]              ; 5       ;
 ; Datapath:DP|IndexRegister:IndexRegister_inst|Creg[0]              ; 4       ;
 ; Controller:CTRL|stateReg.S2                                       ; 4       ;
@@ -1264,10 +1265,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Datapath:DP|DataRegister:CustomAdderRegister_inst|data_out[1]     ; 2       ;
 ; Datapath:DP|DataRegister:CustomAdderRegister_inst|data_out[0]     ; 2       ;
 ; Controller:CTRL|stateReg.RST~feeder                               ; 1       ;
+; Datapath:DP|Absl:Abs_inst|Result[0]~3                             ; 1       ;
+; Datapath:DP|Absl:Abs_inst|Result[0]~6                             ; 1       ;
 ; Controller:CTRL|nextState.S1~0                                    ; 1       ;
-; Datapath:DP|Absl:Abs_inst|Result[0]~2                             ; 1       ;
-; Datapath:DP|Absl:Abs_inst|Result[0]~1                             ; 1       ;
-; Datapath:DP|Absl:Abs_inst|Result[0]~0                             ; 1       ;
 ; Datapath:DP|IndexRegister:IndexRegister_inst|Creg[0]~8            ; 1       ;
 ; Controller:CTRL|nextState.S3~0                                    ; 1       ;
 ; Controller:CTRL|Selector0~0                                       ; 1       ;
@@ -1425,37 +1425,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 107 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 108 / 94,460 ( < 1 % ) ;
 ; C16 interconnects           ; 1 / 3,315 ( < 1 % )    ;
-; C4 interconnects            ; 46 / 60,840 ( < 1 % )  ;
+; C4 interconnects            ; 56 / 60,840 ( < 1 % )  ;
 ; Direct links                ; 48 / 94,460 ( < 1 % )  ;
 ; Global clocks               ; 2 / 16 ( 13 % )        ;
-; Local interconnects         ; 47 / 33,216 ( < 1 % )  ;
-; R24 interconnects           ; 1 / 3,091 ( < 1 % )    ;
-; R4 interconnects            ; 45 / 81,294 ( < 1 % )  ;
+; Local interconnects         ; 44 / 33,216 ( < 1 % )  ;
+; R24 interconnects           ; 2 / 3,091 ( < 1 % )    ;
+; R4 interconnects            ; 66 / 81,294 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.00) ; Number of LABs  (Total = 8) ;
+; Number of Logic Elements  (Average = 12.71) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 1                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 1                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 1                           ;
+; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 1                           ;
-; 8                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 1                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 1                           ;
+; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
+; 15                                          ; 1                           ;
 ; 16                                          ; 4                           ;
 +---------------------------------------------+-----------------------------+
 
@@ -1463,11 +1463,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 8) ;
+; LAB-wide Signals  (Average = 2.29) ; Number of LABs  (Total = 7) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 2                           ;
-; 1 Clock                            ; 7                           ;
-; 1 Clock enable                     ; 5                           ;
+; 1 Clock                            ; 6                           ;
+; 1 Clock enable                     ; 6                           ;
 ; 1 Sync. clear                      ; 2                           ;
 +------------------------------------+-----------------------------+
 
@@ -1475,25 +1475,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 20.88) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced  (Average = 24.00) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 1                           ;
-; 2                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 1                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
-; 6                                            ; 1                           ;
+; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
-; 11                                           ; 1                           ;
+; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
+; 16                                           ; 1                           ;
 ; 17                                           ; 0                           ;
 ; 18                                           ; 0                           ;
 ; 19                                           ; 0                           ;
@@ -1503,8 +1503,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 23                                           ; 0                           ;
 ; 24                                           ; 0                           ;
 ; 25                                           ; 0                           ;
-; 26                                           ; 1                           ;
-; 27                                           ; 1                           ;
+; 26                                           ; 0                           ;
+; 27                                           ; 2                           ;
 ; 28                                           ; 0                           ;
 ; 29                                           ; 0                           ;
 ; 30                                           ; 0                           ;
@@ -1516,23 +1516,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +--------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 10.88) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced Out  (Average = 12.43) ; Number of LABs  (Total = 7) ;
 +--------------------------------------------------+-----------------------------+
 ; 0                                                ; 0                           ;
-; 1                                                ; 1                           ;
-; 2                                                ; 0                           ;
-; 3                                                ; 1                           ;
+; 1                                                ; 0                           ;
+; 2                                                ; 1                           ;
+; 3                                                ; 0                           ;
 ; 4                                                ; 0                           ;
 ; 5                                                ; 0                           ;
 ; 6                                                ; 0                           ;
-; 7                                                ; 1                           ;
-; 8                                                ; 0                           ;
+; 7                                                ; 0                           ;
+; 8                                                ; 1                           ;
 ; 9                                                ; 0                           ;
 ; 10                                               ; 0                           ;
 ; 11                                               ; 0                           ;
 ; 12                                               ; 0                           ;
-; 13                                               ; 1                           ;
-; 14                                               ; 0                           ;
+; 13                                               ; 0                           ;
+; 14                                               ; 1                           ;
 ; 15                                               ; 1                           ;
 ; 16                                               ; 3                           ;
 +--------------------------------------------------+-----------------------------+
@@ -1541,26 +1541,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 8.00) ; Number of LABs  (Total = 8) ;
+; Number of Distinct Inputs  (Average = 9.00) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 1                           ;
-; 4                                           ; 3                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 4                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 1                           ;
+; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
+; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
+; 11                                          ; 1                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
-; 16                                          ; 1                           ;
-; 17                                          ; 0                           ;
+; 16                                          ; 0                           ;
+; 17                                          ; 1                           ;
 ; 18                                          ; 0                           ;
 ; 19                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
@@ -1690,11 +1690,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X55_Y24 to location X65_Y36
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X44_Y24 to location X54_Y36
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 44 output pins without output pin load capacitance assignment
     Info (306007): Pin "sad[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1748,8 +1748,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/mvbir/Documentos/SD/Projeto3/output_files/Projeto3.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Fri Jun 21 09:07:54 2024
+    Info: Peak virtual memory: 4880 megabytes
+    Info: Processing ended: Sat Jun 22 18:59:55 2024
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

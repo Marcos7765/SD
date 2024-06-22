@@ -24,7 +24,7 @@ end Datapath;
 
 architecture Behavioral of Datapath is
 
-    signal sub_result : STD_LOGIC_VECTOR(7 downto 0);
+    signal sub_result : STD_LOGIC_VECTOR(8 downto 0);
     signal abs_result : STD_LOGIC_VECTOR(7 downto 0);
     signal sum_result : STD_LOGIC_VECTOR(31 downto 0);
     signal sum_reg_output : STD_LOGIC_VECTOR(31 downto 0);
@@ -34,13 +34,13 @@ architecture Behavioral of Datapath is
         Port (
             A : in STD_LOGIC_VECTOR(7 downto 0);
             B : in STD_LOGIC_VECTOR(7 downto 0);
-            Result : out STD_LOGIC_VECTOR(7 downto 0)
+            Result : out STD_LOGIC_VECTOR(8 downto 0)
         );
     end component;
 
     component Absl is
         Port (
-            A : in STD_LOGIC_VECTOR(7 downto 0);
+            A : in STD_LOGIC_VECTOR(8 downto 0);
             Result : out STD_LOGIC_VECTOR(7 downto 0)
         );
     end component;

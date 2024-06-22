@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_SIGNED.ALL;
 
 entity Absl is
     Port (
-        A : in STD_LOGIC_VECTOR(8 downto 0);
+        A : in STD_LOGIC_VECTOR(7 downto 0);
         Result : out STD_LOGIC_VECTOR(7 downto 0)
     );
 end Absl;
@@ -14,10 +14,10 @@ architecture Behavioral of Absl is
 begin
     process(A)
     begin
-        if A(8) = '1' then
-            Result <= -A (7 downto 0);
+        if A(7) = '1' then
+            Result <= -A;
         else
-            Result <= A (7 downto 0);
+            Result <= A;
         end if;
     end process;
 end Behavioral;
