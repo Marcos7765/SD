@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Projeto3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SAD_demoB|BCD:BCDe|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_dem.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SAD_demoB|BCD:BCDe|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_6so.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

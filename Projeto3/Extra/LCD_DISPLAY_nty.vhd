@@ -14,7 +14,7 @@ LIBRARY IEEE;
 USE  IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_UNSIGNED.all;
-USE IEEE.NUMERIC_STD.ALL;
+
 
 ENTITY LCD_DISPLAY_nty IS
    
@@ -22,10 +22,7 @@ ENTITY LCD_DISPLAY_nty IS
       reset              : IN     std_logic;  -- Map this Port to a Switch within your [Port Declarations / Pin Planner]  
       clock_50           : IN     std_logic;  -- The DE2 50Mhz Clk and the "clk_count_400hz" counter variable are used to Genreate a 400Hz clock pulse 
                                               -- to drive the LCD CORE state machine.
-      acc_d100			 	 : IN 	 INTEGER RANGE 9 to 0;
-		acc_d10			 	 : IN 	 INTEGER RANGE 9 to 0;
-		acc_d1			 	 : IN 	 INTEGER RANGE 9 to 0;
-		debug_data			 : IN 	 INTEGER RANGE 9 to 0;
+      
       lcd_rs             : OUT    std_logic;
       lcd_e              : OUT    std_logic;
       lcd_rw             : OUT    std_logic;
@@ -41,20 +38,7 @@ ENTITY LCD_DISPLAY_nty IS
       data_bus_6         : INOUT  STD_LOGIC;
       data_bus_7         : INOUT  STD_LOGIC;
       
-      LCD_CHAR_ARRAY_0    : IN    STD_LOGIC;
-      LCD_CHAR_ARRAY_1    : IN    STD_LOGIC;
-      LCD_CHAR_ARRAY_2    : IN    STD_LOGIC;
-      LCD_CHAR_ARRAY_3    : IN    STD_LOGIC;
-      
-      Hex_Display_Data_0 : IN     STD_LOGIC;
-      Hex_Display_Data_1 : IN     STD_LOGIC;
-      Hex_Display_Data_2 : IN     STD_LOGIC;
-      Hex_Display_Data_3 : IN     STD_LOGIC;
-      Hex_Display_Data_4 : IN     STD_LOGIC;
-      Hex_Display_Data_5 : IN     STD_LOGIC;
-      Hex_Display_Data_6 : IN     STD_LOGIC;
-      Hex_Display_Data_7 : IN     STD_LOGIC
-      
+      LCD_CHAR_ARRAY_0   : IN    STD_LOGIC
       
    );
 
@@ -76,25 +60,14 @@ ARCHITECTURE LCD_DISPLAY_arch OF LCD_DISPLAY_nty IS
   signal lcd_display_string          : character_string;
   
   signal lcd_display_string_01       : character_string;
-  signal lcd_display_string_02       : character_string;
-  signal lcd_display_string_03       : character_string;
-  signal lcd_display_string_04       : character_string;
-  signal lcd_display_string_05       : character_string;
-  signal lcd_display_string_06       : character_string;
-  signal lcd_display_string_07       : character_string;
-  signal lcd_display_string_08       : character_string;
-  signal lcd_display_string_09       : character_string;
-  signal lcd_display_string_10       : character_string;
-  signal lcd_display_string_11       : character_string;
   
   signal data_bus_value, next_char   : STD_LOGIC_VECTOR(7 downto 0);
   signal clk_count_400hz             : STD_LOGIC_VECTOR(23 downto 0);
   signal char_count                  : STD_LOGIC_VECTOR(4 downto 0);
   signal clk_400hz_enable,lcd_rw_int : std_logic;
-  
-  signal Hex_Display_Data            : STD_LOGIC_VECTOR(7 DOWNTO 0); 
+
   signal data_bus                    : STD_LOGIC_VECTOR(7 downto 0);	
-  signal LCD_CHAR_ARRAY              : STD_LOGIC_VECTOR(3 DOWNTO 0);
+  signal LCD_CHAR_ARRAY              : STD_LOGIC_VECTOR(3 downto 0);
 
 BEGIN
   
@@ -102,15 +75,7 @@ BEGIN
 
 --===================================================--  
 -- SIGNAL STD_LOGIC_VECTORS assigned to OUTPUT PORTS 
---===================================================--    
-Hex_Display_Data(0) <= Hex_Display_Data_0;
-Hex_Display_Data(1) <= Hex_Display_Data_1;   
-Hex_Display_Data(2) <= Hex_Display_Data_2;
-Hex_Display_Data(3) <= Hex_Display_Data_3;  
-Hex_Display_Data(4) <= Hex_Display_Data_4;
-Hex_Display_Data(5) <= Hex_Display_Data_5;  
-Hex_Display_Data(6) <= Hex_Display_Data_6;
-Hex_Display_Data(7) <= Hex_Display_Data_7;  
+--===================================================--     
 
 data_bus_0 <= data_bus(0);
 data_bus_1 <= data_bus(1);
@@ -122,141 +87,17 @@ data_bus_6 <= data_bus(6);
 data_bus_7 <= data_bus(7);
     
 LCD_CHAR_ARRAY(0) <= LCD_CHAR_ARRAY_0;
-LCD_CHAR_ARRAY(1) <= LCD_CHAR_ARRAY_1;
-LCD_CHAR_ARRAY(2) <= LCD_CHAR_ARRAY_2;
-LCD_CHAR_ARRAY(3) <= LCD_CHAR_ARRAY_3;
 --=====================================--
 
-
-  
-
---===============================-- 
---  HD44780 CHAR DATA HEX VALUES --
---===============================-- 
---   = x"20",
--- ! = x"21",
--- " = x"22",
--- # = x"23",
--- $ = x"24",
--- % = x"25",
--- & = x"26",
--- ' = x"27",
--- ( = x"28",
--- ) = x"29",
--- * = x"2A",
--- + = x"2B",
--- , = x"2C",
--- - = x"2D",
--- . = x"2E",
--- / = x"2F",
-
-
-
--- 0 = x"30",
--- 1 = x"31",
--- 2 = x"32",
--- 3 = x"33",
--- 4 = x"34",
--- 5 = x"35",
--- 6 = x"36",
--- 7 = x"37",
--- 8 = x"38",
--- 9 = x"39",
--- : = x"3A",
--- ; = x"3B",
--- < = x"3C",
--- = = x"3D",
--- > = x"3E",
--- ? = x"3F",
-
-
-
-
--- Q = x"40",
--- A = x"41",
--- B = x"42",
--- C = x"43",
--- D = x"44",
--- E = x"45",
--- F = x"46",
--- G = x"47",
--- H = x"48",
--- I = x"49",
--- J = x"4A",
--- K = x"4B",
--- L = x"4C",
--- M = x"4D",
--- N = x"4E",
--- O = x"4F",
-
-
-
--- P = x"50",
--- Q = x"51",
--- R = x"52",
--- S = x"53",
--- T = x"54",
--- U = x"55",
--- V = x"56",
--- W = x"57",
--- X = x"58",
--- Y = x"59",
--- Z = x"5A",
--- [ = x"5B",
--- Y! = x"5C",
--- ] = x"5D",
--- ^ = x"5E",
--- _ = x"5F",
-
-
-
--- \ = x"60",
--- a = x"61",
--- b = x"62",
--- c = x"63",
--- d = x"64",
--- e = x"65",
--- f = x"66",
--- g = x"67",
--- h = x"68",
--- i = x"69",
--- j = x"6A",
--- k = x"6B",
--- l = x"6C",
--- m = x"6D",
--- n = x"6E",
--- o = x"6F",
-
-
-
--- p = x"70",
--- q = x"71",
--- r = x"72",
--- s = x"73",
--- t = x"74",
--- u = x"75",
--- v = x"76",
--- w = x"77",
--- x = x"78",
--- y = x"79",
--- z = x"7A",
--- { = x"7B",
--- | = x"7C",
--- } = x"7D",
--- -> = x"7E",
--- <- = x"7F",
-
-
  lcd_display_string_01 <= 
-  (
--- Line 1    E     s      t      a      d      o      :                     <index do estado>
-          x"45",x"73",x"74",x"61",x"64",x"6F",x"3A",x"20",std_logic_vector(to_unsigned(debug_data+48, 8)),x"20",x"20",x"20",x"20",x"20",x"20",x"20",
+  (   
+-- Line 1                                        s     a     d
+          x"20",x"20",x"20",x"20",x"20",x"20",x"53",x"41",x"44",x"20",x"20",x"20",x"20",x"20",x"20",x"20",
    
--- Line 2   V     a      l    o     r     :                     <centena>											<dezena>											<unidade>
-			 x"56",x"61",x"6C",x"6F",x"72",x"3A",x"20",std_logic_vector(to_unsigned((acc_d100), 8)+48),std_logic_vector(to_unsigned((acc_d10), 8)+48),std_logic_vector(to_unsigned((acc_d1), 8)+48),
-			 x"20",x"20",x"20",x"20",x"20",x"20"
+-- Line 2                                        h     a     r     d
+          x"20",x"20",x"20",x"20",x"20",x"20",x"48",x"41",x"52",x"44",x"20",x"20",x"20",x"20",x"20",x"20" 
    );
-
+		
 -------------------------------------------------------------------------------------------------------
 -- BIDIRECTIONAL TRI STATE LCD DATA BUS
    data_bus <= data_bus_value when lcd_rw_int = '0' else "ZZZZZZZZ";
@@ -271,23 +112,18 @@ BEGIN
   
 -- get next character in display string based on the LCD_CHAR_ARRAY (switches or Multiplexer)
 
-     CASE (LCD_CHAR_ARRAY) IS
-          
-          -- Bluetooth Disconnected
-       WHEN "0000" =>
-            next_char <= lcd_display_string_01(CONV_INTEGER(char_count));
-                                                                          
-          -- Bluetooth Connected                                                                                         
-       WHEN "0001" =>      
-            next_char <= lcd_display_string_01(CONV_INTEGER(char_count));    
-                                                                                                                              
-          --  BLUETOOTH CONTROLLER                                                                 
-       WHEN OTHERS =>              
-            next_char <= lcd_display_string_01(CONV_INTEGER(char_count));
+     CASE (LCD_CHAR_ARRAY) IS                                                                          
+          -- Sad Hard                                                                                        
+       WHEN "0000" =>      
+            next_char <= lcd_display_string_01(CONV_INTEGER(char_count));        
+                                                                                                                                                                                              
+            WHEN OTHERS =>              
+               next_char <= lcd_display_string_01(CONV_INTEGER(char_count));
                                                      
        END CASE;
 END PROCESS;
-
+  
+  
 --======================= CLOCK SIGNALS ============================--  
 process(clock_50)
 begin
